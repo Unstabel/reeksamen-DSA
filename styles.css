@@ -1,0 +1,105 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  margin: 0;
+  padding: 20px 10px;
+}
+
+h1 {
+  color: #34495e;
+  font-weight: 700;
+  font-size: 3em;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+#tree {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  width: 100%;
+  height: 520px;
+  background-color: #fefefe;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.node {
+  stroke: #222;
+  stroke-width: 2px;
+  filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.15));
+}
+
+.node.red circle {
+  fill: #e74c3c; /* a warmer red */
+  transition: fill 0.3s ease;
+}
+
+.node.black circle {
+  fill: #2c3e50; /* dark navy instead of pure black */
+  transition: fill 0.3s ease;
+}
+
+.link {
+  fill: none;
+  stroke: #34495e;
+  stroke-width: 3px;
+  opacity: 0.85;
+  transition: stroke 0.3s ease;
+}
+
+button.insert-node,
+button.delete-node {
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  font-size: 18px;
+  margin: 6px 3px;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: background-color 0.35s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  user-select: none;
+  min-width: 130px;
+}
+
+button.insert-node {
+  background-color: #27ae60;
+}
+
+button.delete-node {
+  background-color: #c0392b;
+}
+
+button.insert-node:hover {
+  background-color: #2ecc71;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(39, 174, 96, 0.5);
+}
+
+button.delete-node:hover {
+  background-color: #e74c3c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(192, 57, 43, 0.5);
+}
+
+input[type="number"] {
+  padding: 10px 14px;
+  border: 2px solid #bdc3c7;
+  border-radius: 25px;
+  margin-right: 14px;
+  font-size: 17px;
+  width: 120px;
+  outline-color: #2980b9;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+  transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 6px #3498db;
+}
